@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,minimum-scale=1.0,maximum=scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>debris</title>
+    <script src="./jquery-2.1.4.min.js"></script>
+    <script src="./shader_debris.js"></script>
+  </head>
+  
+  <body>
+
+  <script id="vertexShader" type="x-shader/x-vertex">
+
+			precision mediump float;
+			precision mediump int;
+
+			uniform mat4 modelViewMatrix; // optional
+			uniform mat4 projectionMatrix; // optional
+
+			attribute vec3 position;
+			attribute vec4 color;
+
+			varying vec3 vPosition;
+			varying vec4 vColor;
+
+			void main()	{
+
+				vPosition = position;
+				vColor = color;
+
+				gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+
+			}
+
+		</script>
+
+  <script id="fragmentShader" type="x-shader/x-fragment">
+
+			precision mediump float;
+			precision mediump int;
+
+			uniform float time;
+
+			varying vec3 vPosition;
+			varying vec4 vColor;
+
+			void main()	{
+
+				vec4 color = vec4( vColor );
+				color.r += sin( vPosition.x * 10.0 + time ) * 0.5;
+				color.g += sin( vPosition.y * 10.0 + time ) * 0.5;
+				color.b += sin( vPosition.x * 5.0 + time ) * 0.5;
+
+				gl_FragColor = color;
+
+			}
+
+		</script>
+    <!-- PRELOADER START -->
+    <div class="loader-wrapper">
+        <div class='cssload-loader'>
+            <div class='cssload-inner cssload-one'></div>
+            <div class='cssload-inner cssload-two'></div>
+            <div class='cssload-inner cssload-three'></div>
+        </div>
+    </div>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <script>
+      var winObj = $( window ),
+      bodyObj = $( 'body' ),
+      headerObj = $( 'header' );
+
+      winObj.on( 'load', function()
+      {
+        var $preloader = $( '.loader-wrapper' );
+          
+        $preloader.find( '.cssload-loader' ).fadeOut();
+        $preloader.delay( 600 ).fadeOut( 'slow' );
+      } );
+    </script>
+  </body>
+</html>

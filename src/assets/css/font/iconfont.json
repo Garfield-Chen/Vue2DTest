@@ -1,0 +1,72 @@
+{
+  "id": "3020423",
+  "name": "社交网站-logo",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "26651285",
+      "name": "certik",
+      "font_class": "certik1",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "26650901",
+      "name": "certik",
+      "font_class": "certik",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "1445417",
+      "name": "telegram",
+      "font_class": "telegram",
+      "unicode": "e8db",
+      "unicode_decimal": 59611
+    },
+    {
+      "icon_id": "4028669",
+      "name": "视频播放",
+      "font_class": "shipinbofang",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "9117825",
+      "name": "instagram",
+      "font_class": "instagram",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "25690081",
+      "name": "instagram_instagram",
+      "font_class": "instagram_instagram",
+      "unicode": "e86a",
+      "unicode_decimal": 59498
+    },
+    {
+      "icon_id": "10784890",
+      "name": "bxl-telegram",
+      "font_class": "bxl-telegram",
+      "unicode": "e6ea",
+      "unicode_decimal": 59114
+    },
+    {
+      "icon_id": "401192",
+      "name": "twitter",
+      "font_class": "twitter",
+      "unicode": "e89d",
+      "unicode_decimal": 59549
+    },
+    {
+      "icon_id": "26267561",
+      "name": "discord",
+      "font_class": "discord1",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    }
+  ]
+}
